@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "c90d42a5-af2b-4fd4-bb61-b9d7426677c0",
+		"name": "Primer parcial prog 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18233218"
+	},
+	"item": [
+		{
+			"name": "alta Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accion",
+							"value": "alta",
+							"type": "text"
+						},
+						{
+							"key": "sabor",
+							"value": "frutilla",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "crema",
+							"type": "text"
+						},
+						{
+							"key": "vaso",
+							"value": "cucurucho",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/SchryD/Desktop/helado1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "?",
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consulta Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accion",
+							"value": "consulta",
+							"type": "text"
+						},
+						{
+							"key": "sabor",
+							"value": "frutilla",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "crema",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/primerParcial/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"primerParcial",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alta Venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/primerParcial/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"primerParcial",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultaVentas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/primerParcial/index.php?accion=consulta&fechaIni=&sabor=&mail&fechaFin=&vaso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"primerParcial",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "consulta"
+						},
+						{
+							"key": "fechaIni",
+							"value": ""
+						},
+						{
+							"key": "sabor",
+							"value": ""
+						},
+						{
+							"key": "mail",
+							"value": null
+						},
+						{
+							"key": "fechaFin",
+							"value": ""
+						},
+						{
+							"key": "vaso",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put ModificarVenta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"carlos\",\r\n    \"pedidoNro\":13,\r\n    \"mail\":\"prueba@gmail.com\",\r\n    \"tipo\":\"agua\",\r\n    \"vaso\":\"plastico\",\r\n    \"cantidad\":40,\r\n    \"sabor\":\"limon\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/primerParcial/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"primerParcial",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DevolucionPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accion",
+							"value": "devolucion",
+							"type": "text"
+						},
+						{
+							"key": "pedidoNro",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "motivo",
+							"value": "estaba vencido",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "/C:/Users/SchryD/Desktop/nojao.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/primerParcial/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"primerParcial",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Venta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pedidoNro\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/primerParcial/index.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"primerParcial",
+						"index.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Devoluciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/primerParcial/index.php?accion=consultaDevoluciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"primerParcial",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "accion",
+							"value": "consultaDevoluciones"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
